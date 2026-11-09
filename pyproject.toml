@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voiceprep"
+version = "0.1.0"
+description = "Voice-first mock interview coach: practice behavioral answers out loud and get feedback on fillers, pacing, and STAR structure."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Guillermo Barreto" }]
+keywords = ["interview", "practice", "voice", "coaching", "cli"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Environment :: Console",
+]
+
+[project.scripts]
+voiceprep = "voiceprep.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["voiceprep*"]
